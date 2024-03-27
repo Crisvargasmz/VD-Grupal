@@ -1,0 +1,9 @@
+.fondo{
+    background-image: url(fondo.jpg);
+    background-position: center;
+    background-attachment: fixed
+}
+
+.text-white {
+    color: white;
+}
