@@ -21,7 +21,7 @@
     <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
             <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                <span class="fs-4">VD</span>
+                <span class="fs-4">Cineplex</span>
             </a>
             <ul class="nav nav-pills my-2 my-md-0">
                 <li class="nav-item">
@@ -290,11 +290,18 @@
             const cine = document.getElementById('cine').value.trim();
             const nombrePelicula = document.getElementById('nombrePelicula').value.trim();
             const genero = document.getElementById('genero').value.trim();
+            const nAsientos = document.getElementById('nAsientos').value.trim();
+            const nSala = document.getElementById('nSala').value.trim();
+            const calificación = document.getElementById('calificación').value.trim();
+            const director = document.getElementById('director').value.trim();
+            const duracion = document.getElementById('duracion').value.trim();
+            
 
             // Obtener los demás valores del formulario aquí
 
             // Verificar que todos los campos requeridos estén llenos
-            if (cine === '' || nombrePelicula === '' || genero === '') {
+            if (cine === '' || nombrePelicula === '' || genero === ''  || nAsientos=== ''  || nSala=== ''
+            || calificación=== ''  || director=== ''  || duracion=== '') {
                 return;
             }
 
@@ -316,6 +323,11 @@ const content = `
     Cine: ${cine}
     Nombre de la Película: ${nombrePelicula}
     Género de la Película: ${genero}
+    Número de sala = ${nSala}
+    Número de asiento = ${nAsientos}
+    Calificación = ${calificación}
+    Director = ${director}
+    Duración = ${duracion}
 `;
 doc.setFontSize(12);
 doc.text(content, 20, 70);
